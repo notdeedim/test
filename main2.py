@@ -34,12 +34,19 @@ print(card1, card2)
 sup_suit = input("Input superior suit - Spades, Hearts, Clubs or Diamonds:\n")
 
 def comp():
-    if card1[0] > card2[0]:
-        interpreter()
-        print(card1[0], "of", card1[1], "is bigger")
+    if card1[1] == sup_suit and card2[1] == sup_suit:
+        if card1[0] > card2[0]:
+            interpreter()
+            print(card1[0], "of", card1[1], "is bigger")
+        else:
+            interpreter()
+            print(card2[0], "of", card2[1], "is bigger")
     elif card1[1] == sup_suit:
         interpreter()
         print(card1[0], "of", card1[1], "is bigger")
+    elif card2[1] == sup_suit:
+        interpreter()
+        print(card2[0], "of", card2[1], "is bigger")
     else:
         interpreter()
         print(card2[0], "of", card2[1], "is bigger")
